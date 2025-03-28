@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Hard-of-hearing or Deaf Requirements</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script type="text/javascript" src="index.js"></script>
+</head>
+
+<body>
+<header>
+    <div id="headingContainer">
+        <h1>Hard of Hearing or D/deaf</h1>
+        <a id="skipToContent" href="#mainContent">Skip to main content</a>
+        <div id="linkToInaccessiblePage">
+            <a href="inaccessible-hard-of-hearing-deaf-requirements.html"
+            >Make me inaccessible</a
+            >
+        </div>
+    </div>
+    <nav>
+        <button
+                id="navigationButton"
+                class="icon"
+                onclick="toggleDivVisibility('navLinks')"
+        >
+            <icon class="fa fa-bars"></icon>
+            Navigation
+        </button>
+        <div class="navLinks" id="navLinks">
+            <div><a href="index.html">Homepage</a></div>
+            <div><a href="low-vision-requirements.html">Vision</a></div>
+            <div id="currentPage">
+                <a href="hard-of-hearing-deaf-requirements.html">Hearing</a>
+            </div>
+            <div>
+                <a href="limited-dexterity-requirements.html">Dexterity</a>
+            </div>
+            <div><a href="find-out-more.html">FAQs</a></div>
+            <div><a href="instructions.html">Instructions</a></div>
+        </div>
+    </nav>
+</header>
+
+<main id="mainContent">
+    <h2>Requirements</h2>
+    <h3>Captions and transcripts</h3>
+    <p>
+        The video below is just a sample of the full video found at
+        <a href="https://youtu.be/xQFuL2KYRdc?feature=shared"
+        >13 Things My Hearing Friends Should Know</a
+        >. This page has an example of open captions with a transcript
+        provided separately. The linked YouTube video provides closed
+        captions.
+    </p>
+
+    <div id="jkfVideoContainer">
+        <label id="jkfVideoLabel" for="videoWithCaptions"
+        >Jessica Kellgren-Fozard is a YouTuber and disability advocate. This
+            is a section of her "13 Things My Hearing Friends Should Know"
+            video.</label
+        >
+        <video
+                aria-label="Jessica Kellgren-Fozard 13 Things My Hearing Friends Should Know Item 1"
+                id="videoWithCaptions"
+                controls
+        >
+            <source
+                    src=""
+                    type="video/mp4"
+            />
+            Your browser does not support the video tag. Please try the following
+            link to open the whole video in the browser.
+        </video>
+        <br/>
+        <button
+                class="accessibleRectangularBlueButton"
+                id="transcriptButton"
+                onclick="toggleDivVisibility('jkfTranscript')"
+        >
+            Transcript
+        </button>
+        <div id="jkfTranscript">
+            <p>
+                Jessica Kellgren-Fozard: I wanted to start my Deaf video week with
+                13 things I want my hearing friends to know. <br/>
+                #1: I'm faking it. <br/>
+                Yeah, my understanding that is. <br/>
+                Because really, I have no clue! <br/>
+                Probably 50% of the time, I've just- I've lost the plot. <br/>
+                I'm good at it. It's second nature now, but I hate it. <br/>
+                I'll have a conversation with you. We will walk away from each
+                other. <br/>
+                You'll think, "Oh yeah, completely. She completely knows what's
+                going on." <br/>
+                No, no. <br/>
+                For the last 10 minutes, maybe, I've had absolutely no clue.
+                <br/>
+                It is amazing how far "oh, yes" and "really?" and this face <br/>
+                Can get you in life.
+            </p>
+        </div>
+        <button class="accessibleRectangularBlueButton" onclick="toggleDivVisibility('hidableCaptionsInfo')">Learn
+            more about captions and transcripts
+        </button>
+        <div id="hidableCaptionsInfo">
+
+            <p>
+                Captions are extremely important for anyone who may have difficulties
+                understanding spoken language or sounds. This is not just people who are
+                hard of hearing or D/deaf, but also people struggling to pay attention
+                due to neurodivergence or situation, and those accessing the content in
+                locations where the sound cannot/should not be heard.
+            </p>
+            <p>
+                "Open" captions are "baked-in" to the video content, and thus cannot be
+                disabled or enabled. This also means their content can't be accessed by
+                other means, such as a refreshable Braille display which may be used by
+                people with both visual and hearing disabilities.
+            </p>
+            <p>
+                "Closed" captions (CC) can be enabled/disabled, but should be enabled by
+                default. Not every platform will allow the use of CC, but it should be
+                preferred whenever possible. The HTML <span class="code">&lt;video&gt;</span> element has a track
+                attribute, which can be used to provide a <span class="code">.vtt</span> file with the associated
+                captions.
+            </p>
+            <p>
+                Transcripts are the complete written record of the sound content of a
+                piece of media. The speakers should be identified, as well as relevant
+                sound effects, and transcripts should be available independent of
+                progress through media playback.
+            </p>
+            <p>
+                Auto-generated captions can save time, but are rarely accurate. Human
+                live captioners and human-created/reviewed transcripts are preferable,
+                and vital if any media content being misunderstood could have
+                significant negative impact.
+            </p>
+        </div>
+    </div>
+
+    <h3>Sign language</h3>
+    <p>
+        Spoken language is not always the first language of D/deaf people, and,
+        due to grammatical structures of signed languages and spoken languages
+        differing, captions are not necessarily the most accessible way for
+        these users to access content. Providing signed interpreting is a Level
+        AAA WCAG success criterion.
+    </p>
+    <p>
+        Jessica in the video above is using Sign Supported English (SSE) rather
+        than BSL. This uses the signs of BSL but with the grammatical structure
+        of English. This is often used by people who have become deaf later in
+        life.
+    </p>
+    <p>
+        Additonally, while certain signs may overlap, signed languages used in
+        countries that share a spoken language can be vastly different. American
+        Sign Language (ASL) and British Sign Language (BSL), for example, differ
+        hugely, with the former having far more in common with French Sign
+        Language (LSF).
+    </p>
+    <h2>A note on language</h2>
+    <p>
+        People who are culturally Deaf (e.g. raised in a Deaf family) refer to
+        themselves as "Deaf" with an uppercase "D". A person can be deaf but not
+        Deaf, hence the usage of "D/deaf" here. Further explanation on this can
+        be found at
+        <a
+                href="https://www.inclusionlondon.org.uk/about-us/disability-in-london/cultural-model-of-deafness/the-cultural-model-of-deafness/"
+        >Inclusion London</a
+        >.
+    </p>
+</main>
+</body>
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Low Vision Requirements</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" src="index.js"></script>
+  </head>
+  <body>
+    <div class="headerInaccessible">
+      <div id="headingContainerInaccessible">
+        <div class="h1Inaccessible">
+          Digital Accessibility for People with Differing, Low or No Vision
+        </div>
+        <div id="linkToAccessiblePage">
+          <img
+            id="linkToAccessibleImage"
+            src="images/unhelpful-image-name.png"
+            onclick="window.location='low-vision-requirements.html';"
+          />
+        </div>
+      </div>
+      <div class="navInaccessible">
+        <div
+          class="linkInaccessible"
+          onclick="window.location='inaccessible-index.html';"
+        >
+          Homepage
+        </div>
+        <div
+          class="linkInaccessible"
+          onclick="window.location='inaccessible-low-vision-requirements.html';"
+        >
+          Vision
+        </div>
+        <div
+          class="linkInaccessible"
+          id="hohNavItem"
+          onclick="window.location='inaccessible-hard-of-hearing-deaf-requirements.html';"
+        >
+          Hearing
+        </div>
+        <div
+          class="linkInaccessible"
+          onclick="window.location='inaccessible-limited-dexterity-requirements.html';"
+        >
+          Dexterity
+        </div>
+        <div
+          class="linkInaccessible"
+          onclick="window.location='inaccessible-find-out-more.html';"
+        >
+          FAQs
+        </div>
+        <div
+          class="linkInaccessible"
+          onclick="window.location='inaccessible-instructions.html';"
+        >
+          Instructions
+        </div>
+      </div>
+    </div>
+    <div id="mainDiv">
+      <h2>Requirements</h2>
+      <p>
+        Done the activities before and just want to see all the information?
+        <button
+          class="inaccessibleRectangularBlueButton"
+          id="displayAllAccessibilityInfo"
+          onclick="return openHiddenDivs(['hidableLowVisionInfo', 'hidableCorrectImageGuess'])"
+        >
+          Display all info
+        </button>
+      </p>
+      <p>
+        Colorblindly extension not working? Click this button to change UI
+        colours to those seen by people with red-green colourblindness.
+        <button
+          class="inaccessibleRectangularBlueButton"
+          id="changeToColourblindColours"
+          onclick="setLowVisionButtonsToColourblindColours()"
+        >
+          Change colours
+        </button>
+      </p>
+      <div class="h3Inaccessible">
+        Alt text and descriptions of video content
+      </div>
+
+      <div id="blurredImageContainer">
+        <figure id="blurredImage">
+          <img
+            id="rabbitPhoto"
+            src="./images/Blurry Grey Rabbit Final.jpeg"
+            alt="Digital Accessibility Web Accessibility Accessible Design Inclusive Design Accessibility Standards WCAG (Web Content Accessibility Guidelines) ADA Compliance (Americans with Disabilities Act) Section 508 Compliance A11Y (Accessibility) User Experience (UX) Accessible UX Screen Reader Friendly Keyboard Navigation Alt Text Accessible Media Transcripts Closed Captions Color Contrast Large Text Responsive Design Mobile Accessibility Assistive Technology Universal Design Disability Rights Usability"
+            title="Digital Accessibility Web Accessibility Accessible Design Inclusive Design Accessibility Standards WCAG (Web Content Accessibility Guidelines) ADA Compliance (Americans with Disabilities Act) Section 508 Compliance A11Y (Accessibility) User Experience (UX) Accessible UX Screen Reader Friendly Keyboard Navigation Alt Text Accessible Media Transcripts Closed Captions Color Contrast Large Text Responsive Design Mobile Accessibility Assistive Technology Universal Design Disability Rights Usability"
+          />
+          <figcaption>
+            An example of what a photo may look like to someone with a specific
+            type of visual impairment.
+          </figcaption>
+        </figure>
+      </div>
+      <p>
+        What is in the image above? Hover your cursor over the image to see the
+        content of the alt text, then choose an option. The correct option will
+        reveal more information about alt text.
+      </p>
+      <p>
+        If you are a keyboard-only/touch-only user, use the following button to
+        view the content of the alt text:
+        <button
+          class="inaccessibleRectangularBlueButton"
+          id="seeAltTextContentButton"
+          onclick="toggleDivVisibility('hidableAltTextContent')"
+        >
+          Show alt text
+        </button>
+      </p>
+      <div id="hidableAltTextContent">
+        Digital Accessibility Web Accessibility Accessible Design Inclusive
+        Design Accessibility Standards WCAG (Web Content Accessibility
+        Guidelines) ADA Compliance (Americans with Disabilities Act) Section 508
+        Compliance A11Y (Accessibility) User Experience (UX) Accessible UX
+        Screen Reader Friendly Keyboard Navigation Alt Text Accessible Media
+        Transcripts Closed Captions Color Contrast Large Text Responsive Design
+        Mobile Accessibility Assistive Technology Universal Design Disability
+        Rights Usability
+      </div>
+      <div id="imageGuessButtons">
+        <button
+          class="inaccessibleRectangularBlueButton"
+          onclick="handleWrongAltTextSelection()"
+        >
+          A woman holding flowers
+        </button>
+        <button
+          class="inaccessibleRectangularBlueButton"
+          onclick="return openOneDivAndCloseOthers('hidableCorrectImageGuess', ['hidableWrongImageGuess'])"
+        >
+          A grey rabbit
+        </button>
+        <button
+          class="inaccessibleRectangularBlueButton"
+          onclick="handleWrongAltTextSelection()"
+        >
+          A cartoon penguin
+        </button>
+        <button
+          class="inaccessibleRectangularBlueButton"
+          onclick="handleWrongAltTextSelection()"
+        >
+          A worn statue
+        </button>
+      </div>
+      <div id="hidableWrongImageGuess">
+        Incorrect - and screenreader users don't usually get the benefit of
+        multiple-choice!
+      </div>
+      <div id="hidableCorrectImageGuess">
+        Correct! If you managed to guess despite the useless alt text, do this
+        again on the Accessible version of this page and see what a difference
+        accurate alt text can make.
+        <p>
+          N.B: The "<span class="code">title</span>" attribute is used above
+          purely to quickly visually display the content of the alt text. Never
+          solely rely on the title attribute to provide information, as it is
+          inaccessible to keyboard-only and touch-only users.
+        </p>
+        <div class="h4Inaccessible">More information about alt text</div>
+        <p>All non-text content should also be available in text.</p>
+        <ul>
+          <li>
+            Providing alternative text for an image doesn't always mean
+            providing an explicit description of the image, but the
+            meaning/context of the image should always be transcribed.
+          </li>
+          <li>
+            Alt text doesn't need to include the word "picture" or "image"
+            because the screenreader will announce "graphic" as standard.
+          </li>
+          <li>
+            If working with diagrams or charts:
+            <ul>
+              <li>Add "diagram" or "chart" to the alt text.</li>
+              <li>
+                Very explicitly state what's shown in the diagram in enough
+                detail that someone who can't see the image still gets all the
+                same information.
+              </li>
+              <li>
+                If there's text elsewhere which entirely fulfils the criteria of
+                alt text for an image or chart, use the "<span class="code"
+                  >aria-labelledby</span
+                >" attribute and provide the <span class="code">id</span> of
+                this text.
+              </li>
+            </ul>
+          </li>
+          <li>
+            If an image depicts a named item where the name doesn't directly
+            relate to the image, provide both the given name and an explicit
+            description.
+            <ul>
+              <li>
+                For example, if the image is of a pink item of clothing but the
+                name of that colour option is "Wish", then the alt text should
+                include both a description of the clothing item (e.g. "A
+                short-sleeved pastel pink tshirt with a white polka-dot
+                pattern") and the word (e.g. "Colour variant name is 'Wish'.").
+              </li>
+            </ul>
+          </li>
+          <li>
+            Never use an image of text for anything except e.g. logos, and
+            provide alt text in the case of the latter. Notice how the "Make me
+            accessible" link above is actually an image of text with no alt text
+            or keyboard focus option - someone using a screenreader would be
+            completely unable to observe or use this link.
+          </li>
+          <li>
+            Never include any meaningful image using the CSS
+            <span class="code">background-image</span>
+            property, as screenreaders will skip it.
+          </li>
+          <li>
+            Exceptions to the need for alt text:
+            <ul>
+              <li>
+                When the experience added to the content is purely sensory, e.g.
+                video of someone drawing, but there should still be some kind of
+                identifying label (e.g. "speed drawing of Edinburgh Castle").
+              </li>
+              <li>
+                CaptCHAs - bots can read alt text, thus defeating the purpose of
+                the CaptCHA, but there should be alternative CaptCHAs designed
+                for people with disabilities, and/or a phone number to call for
+                support.
+              </li>
+              <li>
+                When an image is for decoration only and is otherwise
+                meaningless - in this case the "<span class="code">noAlt</span>"
+                attribute should be added.
+              </li>
+              <li>
+                Input forms as a whole due to their interactivity. Each
+                individual input should still have an appropriate label.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Never, ever, use the alt text attribute for lists of words related
+            to page topics for "search engine optimisation", as is sometimes
+            ignorantly suggested.
+          </li>
+        </ul>
+        <p>
+          Any time-based visual content (e.g. instruction videos) should be
+          accompanied by a text alternative describing the visual content and/or
+          by an audio description.
+        </p>
+      </div>
+      <div class="h3Inaccessible">Sensory characteristics of UI</div>
+      <p>
+        Don't create interfaces that only rely on sensory characteristics in
+        order to be operable. These characteristics could be colour, shape, or
+        location on the page. Screenreaders do not indicate what shape or colour
+        a button is, nor whether it's on the left or right of a page. Even a
+        sighted user with colourblindness can be disadvantaged by only using
+        colour to differentiate components.
+      </p>
+      <p>Select the red circle to view more information.</p>
+      <!--   Colourblind sRGB values for green (left) circle are 109 111 19-->
+      <!--   Colourblind sRGB values for red (right) circle are 138 141 0	-->
+      <div id="inaccessibleLowVisionButtons">
+        <button id="wrongButton" onclick="alert('I\'m the wrong button!')">
+          Click me
+        </button>
+        <button
+          id="moreContentButton"
+          onclick="toggleDivVisibility('hidableLowVisionInfo')"
+        >
+          Click me
+        </button>
+      </div>
+      <div id="hidableLowVisionInfo">
+        <p>
+          To someone using a screenreader or someone with red-green
+          colourblindness, it's impossible to tell which of the two buttons
+          above is correct without trying them both - imagine the problems if
+          one cancelled an order and the other submitted an order. If we had
+          said "select the red circle on the right", this would have helped a
+          colourblind user but not one using a screenreader.
+        </p>
+        <p>
+          This requirement doesn't mean that colour can't be used to
+          differentiate elements, only that it can't solely be responsible for
+          this. Labelling elements is an excellent way to fulfil this criterion.
+        </p>
+      </div>
+      <div class="h3Inaccessible">Colour contrast</div>
+      <ul>
+        <li>
+          There should always be a contrast ratio of at least 4.5:1 between
+          text/foreground colour and the background colour, except for in the
+          following cases:
+          <ul>
+            <li>
+              Large-scale text of at least 18pt or 14pt bold font size, in which
+              case the ratio should be at least 3:1.
+            </li>
+            <li>
+              Text that's part of an inactive UI component (disabled), is purely
+              decorative, isn't visible to anyone, or are part of a picture
+              containing significant other visual content.
+            </li>
+            <li>Text that's part of a logo or brand name.</li>
+          </ul>
+        </li>
+        <li>
+          To conform to the "Enhanced" contrast criterion (Level AAA), the ratio
+          between text and background should be >=7:1, except for large-scale
+          text which should have a ratio of at least 4.5:1.
+          <ul>
+            <li>
+              A common default text base colour is
+              <span class="code">#666666</span> (or
+              <span class="code">rgb(102, 102, 102)</span>), which fails this
+              criterion against a white background, but
+              <span class="code">#575757</span> passes.
+            </li>
+            <li>
+              <span class="basicTextColour"
+                >This text has the
+                <span class="code">#666666</span> colour. </span
+              ><span
+                >This text has the <span class="code">#575757</span> colour, as
+                does the rest of the basic text on this website.</span
+              >
+            </li>
+            <li>
+              The aesthetic doesn't appear to be negatively affected by this
+              change, but this small change would make the difference between
+              making the page fully accessible in this aspect or not.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+        Note the difference in how easy it is to read text with high contrast
+        against the background compared with low contrast against the
+        background.
+      </p>
+      <div id="contrastContainer">
+        <figure>
+          <img
+            id="loremIpsumLowContrast"
+            src="./images/Lorem Ipsum Colour Low Contrast.png"
+          />
+          <figcaption>
+            A foreground to background contrast ratio of 1.11:1
+          </figcaption>
+        </figure>
+        <figure>
+          <img
+            id="loremIpsumHighContrast"
+            src="./images/Lorem%20Ipsum%20Colour%20High%20Contrast.png"
+          />
+          <figcaption>
+            A foreground to background contrast ratio of 21:1
+          </figcaption>
+        </figure>
+      </div>
+      <div class="h3Inaccessible">Responsive design</div>
+      <ul>
+        <li>
+          Content can be presented without loss of information or functionality,
+          and without requiring scrolling in two dimensions for:
+          <ul>
+            <li>
+              Vertical scrolling content at a width greater than or equivalent
+              to 320 CSS pixels (e.g. a viewport width of 1280px wide at 400%
+              zoom).
+            </li>
+            <li>
+              Horizontal scrolling at a height greater than or equivalent to 256
+              CSS pixels (e.g. a viewport height of 1024px at 400% zoom).
+            </li>
+          </ul>
+        </li>
+        <li>
+          Note how the functionality of the navigation bar on this page is lost
+          at narrower screen widths, with options being pushed offscreen.
+        </li>
+        <li>
+          An exception to this requirement is for parts of content which require
+          a 2D layout for usage or meaning. For example, if a table component
+          has horizontal and vertical scrolling when the viewport is greater
+          than the dimensions above, this is acceptable as long as only the
+          table component has these scrollbars and not the whole page.
+        </li>
+      </ul>
+      <div class="h3Inaccessible">Focus indicator</div>
+      <p>
+        Don't rely on the default browser focus indicator, as in many cases this
+        violates accessibility criteria.
+      </p>
+      <ul>
+        <li>
+          When a UI component displays visible keyboard focus, all of the
+          following should be true:
+          <ul>
+            <li>
+              The focus indication area should be at least as large as the
+              longest side of the bounding rectangle of the focussed control.
+              i.e. The focus ring should be around the whole element.
+            </li>
+            <li>
+              The colour changes used to indicate focus should have at least a
+              3:1 contrast ratio with the colours changed from the unfocussed
+              control.
+            </li>
+            <li>
+              The focus indication area either has a thickness of at least 2 CSS
+              pixels, or has a 3:1 contrast ratio against all adjacent colours.
+            </li>
+          </ul>
+        </li>
+        <li>The focus ring should always be solid, not dotted or dashed.</li>
+        <li>
+          The ring should be around the whole element, but this doesn't mean it
+          needs to conform to the shape of the element - for example, a
+          star-shaped element doesn't need a star-shaped focus ring.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

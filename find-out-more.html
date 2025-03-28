@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Frequently Asked Questions</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+<header>
+    <div id="headingContainer">
+        <h1>FAQs/Further Resources</h1>
+        <a id="skipToContent" href="#mainContent">Skip to main content</a>
+        <div id="linkToInaccessiblePage">
+            <a href="inaccessible-find-out-more.html">Make me inaccessible</a>
+        </div>
+    </div>
+    <nav>
+        <button
+                id="navigationButton"
+                class="icon"
+                onclick="toggleDivVisibility('navLinks')"
+        >
+            <icon class="fa fa-bars"></icon>
+            Navigation
+        </button>
+        <div class="navLinks" id="navLinks">
+            <div><a href="index.html">Homepage</a></div>
+            <div><a href="low-vision-requirements.html">Vision</a></div>
+            <div id="hohNavItem">
+                <a href="hard-of-hearing-deaf-requirements.html">Hearing</a>
+            </div>
+            <div>
+                <a href="limited-dexterity-requirements.html">Dexterity</a>
+            </div>
+            <div id="currentPage">
+                <a href="find-out-more.html">FAQs</a>
+            </div>
+            <div><a href="instructions.html">Instructions</a></div>
+        </div>
+    </nav>
+</header>
+<main id="mainContent">
+    <h2>Further resources</h2>
+
+    <h3>How do I find out what the contrast ratio is between my elements?</h3>
+    <a href="https://webaim.org/resources/contrastchecker/"
+    >Take me to the WebAIM Colour Contrast Checker</a
+    >
+    <h3>
+        How do I implement a "skip to content" link, and what should I call it?
+    </h3>
+    <a href="https://webaim.org/techniques/skipnav/"
+    >Find out about "skip to content" links from WebAIM</a
+    >
+    <h3>How do I simulate colourblindness for testing my webpage?</h3>
+    <a
+            href="https://chromewebstore.google.com/detail/colorblindly/floniaahmccleoclneebhhmnjgdfijgg"
+    >The Colorblindly Chrome extension is a great way to simulate
+        colourblindness</a
+    >
+    <br/>
+    <button
+            class="accessibleRectangularBlueButton"
+            id="seeColorblindlyInstructionsButton"
+            onclick="toggleDivVisibility('hidableColorblindlyInstructions')"
+    >
+        I'm having trouble getting Colorblindly to work
+    </button>
+    <div id="hidableColorblindlyInstructions">
+        <p>
+            Go to the extension "Details" page and make sure that "Site access" is
+            set to "On click" and "Allow access to file URLs" is toggled on.
+        </p>
+    </div>
+    <h3>May I see the bunny?</h3>
+    <button
+            class="accessibleRectangularBlueButton"
+            id="seeRabbitButton"
+            onclick="toggleDivVisibility('hidableClearRabbitPhoto')"
+    >
+        You may see the bunny
+    </button>
+    <div id="hidableClearRabbitPhoto">
+        <img
+                id="rabbitPhoto"
+                src="./images/Grey Lop Rabbit.jpg"
+                alt="A photograph of a grey baby domestic rabbit with lop ears. It is standing on its hind legs. The watermark is from Warren Photographic."
+                title="A photograph of a grey baby domestic rabbit with lop ears. It is standing on its hind legs. The watermark is from Warren Photographic."
+        />
+    </div>
+    <h3>What is a refreshable Braille display?</h3>
+    <a
+            href="https://www.rnib.org.uk/living-with-sight-loss/assistive-aids-and-technology/reading-and-writing/an-rnib-guide-to-braille-displays-for-blind-and-partially-sighted-people/"
+    >Find out what a refreshable Braille display is from The Royal National
+        Institute of Blind People</a
+    >
+    <h3>Where can I find out more about accessibility requirements?</h3>
+    <a href="https://www.w3.org/TR/WCAG22/"
+    >Consult the Web Content Accessibility Guidelines (WCAG) 2.2</a
+    >
+    <h3>Where did that stat about the top million homepages come from?</h3>
+    <a href="https://webaim.org/projects/million/">
+        Find out how websites ranked in the WebAIM One Million project
+    </a>
+    <h3>Why no <span class="code">title</span> attribute?</h3>
+    <a href="https://html.spec.whatwg.org/multipage/dom.html#the-title-attribute">
+        What does the HTML specification say about the title attribute?
+    </a>
+</main>
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Limited Dexterity Requirements</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+<header>
+    <div id="headingContainer">
+        <h1>Limited Dexterity</h1>
+        <a id="skipToContent" href="#mainContent">Skip to main content</a>
+        <div id="linkToInaccessiblePage">
+            <a href="inaccessible-limited-dexterity-requirements.html"
+            >Make me inaccessible</a
+            >
+        </div>
+    </div>
+    <nav>
+        <button
+                id="navigationButton"
+                class="icon"
+                onclick="toggleDivVisibility('navLinks')"
+        >
+            <icon class="fa fa-bars"></icon>
+            Navigation
+        </button>
+        <div class="navLinks" id="navLinks">
+            <div><a href="index.html">Homepage</a></div>
+            <div><a href="low-vision-requirements.html">Vision</a></div>
+            <div id="hohNavItem">
+                <a href="hard-of-hearing-deaf-requirements.html">Hearing</a>
+            </div>
+            <div id="currentPage">
+                <a href="limited-dexterity-requirements.html">Dexterity</a>
+            </div>
+            <div><a href="find-out-more.html">FAQs</a></div>
+            <div><a href="instructions.html">Instructions</a></div>
+        </div>
+    </nav>
+    <div id="bloatContent">
+        <a href="limited-dexterity-requirements.html">I'm some ad bloat!</a>
+        <a href="limited-dexterity-requirements.html">Me too!</a>
+        <button>Ooooh...</button>
+        <a href="limited-dexterity-requirements.html"
+        >I could navigate you to an unsafe website! Hopefully you don't
+            activate me by mistake!</a
+        >
+        <a href="limited-dexterity-requirements.html"
+        >Developers HATE her because of this one weird trick!</a
+        >
+        <button>What does this button do?</button>
+    </div>
+</header>
+<main id="mainContent">
+    <h2>Context</h2>
+    <p>
+        People may have limited dexterity for many different reasons, such as:
+    </p>
+    <ul>
+        <li>
+            Paralysis from brain, spinal or nerve injury, including from such
+            causes as stroke or quadriplegia.
+        </li>
+        <li>
+            Amputation or congenital difference meaning the user does not have ten fingers, two hands/arms, etc.
+        </li>
+        <li>
+            Poor control of hands or fingers due to tremors, weakness or
+            spasticity, which could be caused by conditions such as cerebral palsy, muscular dystrophy,
+            or multiple sclerosis.
+        </li>
+        <li>
+            Extreme fatigue, whether caused by illness (e.g. M.E., heart disease)
+            or not.
+        </li>
+        <li>
+            Temporary disability, such as from a broken limb or repetitive strain
+            injury.
+        </li>
+        <li>
+            Situation, such as needing to hold something with one hand/arm (e.g. a
+            child, food) and only being able to freely use the other.
+        </li>
+    </ul>
+    <p>
+        While some users may control their devices with their voice, not every
+        user in this category will. It's especially important to consider
+        keyboard-only users.
+    </p>
+    <h2>Requirements</h2>
+    <!-- No drag and drop -->
+    <!-- No keyboard traps - modal? -->
+    <!-- Custom shortcuts? -->
+    <!-- Skip to content -->
+    <!-- Things moving around on the page so what you try to interact with moves and you either miss it or interact with something else. Esp bad for people with tremors. -->
+    <h3>Keyboard use</h3>
+    <h4>Operable only with keyboard</h4>
+    <p>Try to access the following button using only the keyboard (Tab, arrow, and Enter keys):</p>
+    <div class="buttonContainer">
+        <button class="accessibleRectangularBlueButton" id="accessibleKeyboardOnlyOpenButton"
+                onclick="toggleDivVisibility('hidableKeyboardOnlyInfo')">
+            See Keyboard-Only Info
+        </button>
+    </div>
+    <div id="hidableKeyboardOnlyInfo">
+        <ul>
+            <li>
+                All content functionality should be operable through a keyboard
+                interface, without requiring specific timing for individual
+                keystrokes.
+                <ul>
+                    <li>
+                        The only exception to this is when the underlying function
+                        requires input that depends on the path of the user's movement and
+                        not just the endpoints.
+                    </li>
+                    <li>
+                        Please be aware of the difference between function and input
+                        technique. If handwriting is being used to enter text, the input
+                        technique requires path-dependent input, but the underlying
+                        function of inputting text does not. In this case, the user should
+                        be able to choose to enter text through the keyboard, not just a
+                        touchscreen or other pad.
+                    </li>
+                    <li>
+                        If drag-and-drop/swiping is an important input mechanic for the
+                        page, an alternative must be available and obvious. Often a button
+                        is the most suitable substitute.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                This is one of many occasions where using appropriate semantic
+                elements will make it easier to create accessible sites, as using the
+                correct element for the situation means elements that should be
+                focussable generally will be. If an element needs to become
+                focussable, adding <span class="code">tabindex=0</span> will at least place it inside the tab
+                order.
+            </li>
+        </ul>
+    </div>
+    <h4>Keyboard traps</h4>
+    <ul>
+        <li>
+            Be aware of keyboard navigation when constructing forms. Radio button
+            groups should be grouped using <span class="code">fieldset</span>, and individual entries should
+            be focussable using arrow buttons, with tab taking the user out of the
+            fieldset to the next group.
+        </li>
+        <li>
+            Additionally, be very conscious of any use of the <span class="code">autofocus</span> attribute
+            for an input field - it can be extremely confusing for users to start
+            in what could be the middle of the page.
+        </li>
+    </ul>
+    <form id="accessibleDexForm">
+        <label for="firstName">Enter your first name: </label>
+        <input type="text" id="firstName"/><br/>
+        <fieldset>
+            <legend>How familiar are you with digital accessibility?</legend>
+            <div>
+                <input
+                        type="radio"
+                        name="familiarity"
+                        id="unfamiliar"
+                        value="unfamiliar"
+                />
+                <label for="unfamiliar">Unfamiliar</label>
+            </div>
+            <div>
+                <input
+                        type="radio"
+                        name="familiarity"
+                        id="modFamiliar"
+                        value="modFamiliar"
+                />
+                <label for="modFamiliar">Moderately familiar</label>
+            </div>
+            <div>
+                <input
+                        type="radio"
+                        name="familiarity"
+                        id="veryFamiliar"
+                        value="veryFamiliar"
+                />
+                <label for="veryFamiliar">Very familiar</label>
+            </div>
+        </fieldset>
+    </form>
+    <!-- Find source for this - can't remember where I saw it -->
+    <!-- <li>
+      Required fields in forms can cause keyboard traps, where the field
+      will not allow the user to tab on without the required input. Mouse
+      users can click away from the form, but keyboard users cannot.
+    </li> -->
+    <ul>
+        <li>
+            Keyboard traps, components which can have focus moved to them using
+            the keyboard but cannot have focus moved away from them using the
+            keyboard, must be avoided.
+            <ul>
+                <li>
+                    If the keys needed to move away from a component are more than unmodified arrow/tab
+                    keys, the user should be advised of this.
+                </li>
+                <li>
+                    Modals are a common cause of keyboard traps - ensure there is a way to
+                    exit your modals that doesn't require the use of a mouse. The HTML <span
+                        class="code">&lt;dialog&gt;</span> element should be
+                    used for
+                    modals whenever possible, as it handles keyboard-only use appropriately.
+                </li>
+            </ul>
+        </li>
+        <li>Modals should always have a semantic <span class="code">h1</span> heading (this may be styled to look
+            smaller) and a body. The heading
+            should indicate the content of the modal and/or reason for its existence.
+        </li>
+    </ul>
+    <dialog id="accessibleModal">
+        <form method="dialog">
+            <div id="modalHeadingContainer">
+                <h1 id="modalHeading">Interact with an accessible modal</h1>
+                <button
+                        id="accessibleModalCloseButton"
+                        type="submit"
+                        onclick=""
+                        aria-label="close"
+                        formmethod="dialog"
+                        formnovalidate
+                >
+                    &times;
+                </button>
+            </div>
+            <p>
+                I'm a modal, can you close me without using the mouse? What happens
+                if you hit Tab a lot?
+            </p>
+            <div class="modalButtonBar">
+                <button class="accessibleRectangularBlueButton" id="confirmButton" class="confirmButton">Confirm
+                </button
+                >
+                <button id="cancelButton" class="cancelButton">Cancel</button>
+            </div>
+        </form>
+    </dialog>
+    <div class="buttonContainer">
+        <button class="accessibleRectangularBlueButton" id="accessibleModalOpenButton">
+            Open Modal
+        </button>
+    </div>
+
+    <h4>Skip content blocks</h4>
+    <ul>
+        <li>
+            It should be possible to skip past blocks of content that is repeated
+            on every page (e.g. navigation, ad frames). This is often implemented
+            as a "skip to content" link placed at the top of the page.
+        </li>
+        <li>
+            These links can still be necessary even in smaller viewports - people
+            using voice control or screenreaders on mobile devices, or those with
+            high zoom levels on larger devices, still benefit from being able to
+            skip repeated content.
+        </li>
+        <li>
+            Entirely visually hiding these links for the sake of aesthetic
+            prevents sighted keyboard users, those most likely to not have
+            additional navigation methods, from knowing they exist and thus being
+            able to use them.
+        </li>
+        <li>
+            However, a permanent link doesn't always fit the planned user
+            interface design. When it comes to "desktop" use, the best compromise between these conflicting needs
+            is to have a skip to content link initially placed off-screen (not
+            with <span class="code">display:none</span> as this hides the link from use entirely) which then
+            is moved very obviously into view when it receives keyboard focus.
+            This is done on every accessible page of this website other than the
+            homepage for demonstration purposes.
+        </li>
+    </ul>
+    <h3>Mouse or mobile use</h3>
+    <h4>Consistent placement</h4>
+    <ul>
+        <li>
+            It's important that elements don't jump around the page, particularly
+            if this happens during use and is not in response to user action.
+        </li>
+        <li>
+            A button moving out from underneath a finger tap or cursor, leading to
+            a misclick/mistap, is incredibly frustrating for all users, but
+            particularly those with tremors or who otherwise need to expend more
+            effort on motor planning.
+        </li>
+    </ul>
+    <script>
+        const modal = document.getElementById("accessibleModalOpenButton");
+        const dialog = document.getElementById("accessibleModal");
+        const cancelButton = document.getElementById("cancelButton");
+        modal.addEventListener("click", (event) => {
+            dialog.showModal();
+        });
+        cancelButton.addEventListener("click", (event) => {
+            dialog.close();
+        });
+    </script>
+</main>
+</body>
+</html>

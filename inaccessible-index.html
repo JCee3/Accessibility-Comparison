@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Accessibility - Bad</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" src="index.js"></script>
+  </head>
+
+  <body>
+    <div class="headerInaccessible">
+      <div id="headingContainerInaccessible">
+        <div class="h1Inaccessible">Digital Accessibility</div>
+        <div id="linkToAccessiblePage">
+          <img
+            id="linkToAccessibleImage"
+            src="images/unhelpful-image-name.png"
+            onclick="window.location='index.html';"
+          />
+        </div>
+      </div>
+      <div class="navInaccessible">
+        <div
+          class="linkInaccessible"
+          onclick="window.location='inaccessible-index.html';"
+        >
+          Homepage
+        </div>
+        <div
+          class="linkInaccessible"
+          onclick="window.location='inaccessible-low-vision-requirements.html';"
+        >
+          Vision
+        </div>
+        <div
+          class="linkInaccessible"
+          onclick="window.location='inaccessible-hard-of-hearing-deaf-requirements.html';"
+        >
+          Hearing
+        </div>
+        <div
+          class="linkInaccessible"
+          onclick="window.location='inaccessible-limited-dexterity-requirements.html';"
+        >
+          Dexterity
+        </div>
+        <div
+          class="linkInaccessible"
+          onclick="window.location='inaccessible-find-out-more.html';"
+        >
+          FAQs
+        </div>
+        <div
+                class="linkInaccessible"
+                onclick="window.location='inaccessible-instructions.html';"
+        >
+          Instructions
+        </div>
+      </div>
+    </div>
+    <div id="mainDiv">
+      <div id="webpageAccessibilityStat" class="quote">
+        <p>
+          In February 2024, only 4.1% of the top million web home pages were
+          digitally accessible, based on automated accessibility checking.
+        </p>
+        <p class="bold">
+          This checking only covers 25-30% of accessibility requirements.
+        </p>
+        <!-- https://webaim.org/projects/million/ -->
+      </div>
+      <div>
+        <div class="h2Inaccessible">Introduction</div>
+        <p>
+          The
+          <a href="https://www.w3.org/TR/WCAG22/"
+            >Web Content Accessibility Guidelines (WCAG 2.2)</a
+          >
+          provide extensive and valuable guidance on the requirements to make
+          the web accessible. There are three levels of compliance (A, AA, and
+          AAA), with Level A being the absolute minimum required. This page aims
+          to inform readers from a developer perspective of the basics needed to
+          make their pages accessible to users with a wide range of disabilities
+          and access requirements. Additionally, it is intended to help users understand a little of how it feels to
+          have accessibility requirements that aren't met.</p>
+        <p>Please see the Instructions section for activities to carry out. </p>
+        <p>Below are some requirements that apply to
+          multiple disabilities, or which do not fit into the categories above -
+          more specific requirements are described in the pages for each
+          disability.
+        </p>
+      </div>
+      <div class="requirementsInfo" id="requirementsInfoInaccessible">
+        <div class="h2Inaccessible">General Requirements</div>
+        <div class="h3Inaccessible">
+          Information and Relationships, Meaningful Sequence
+        </div>
+        <ul>
+          <li>
+            Use semantic elements - heading (<span class="code">&lt;h&gt;</span>) tags,
+            <span class="code">nav</span>s for
+            navigation, link (<span class="code">&lt;a&gt;</span>) and
+            <span class="code">button</span> elements rather than <span class="code">divs</span> or <span
+                  class="code">spans</span> with
+            <span class="code">onClick()</span>.
+          </li>
+          <li>
+            Never use the CSS <span class="code">content</span> property to provide meaningful text - this
+            will not be included in the DOM and is thus inaccessible to anyone
+            using tools that rely on the DOM.
+          </li>
+          <li>
+            Content should have a logical order, and the focus order should
+            follow the reading order.
+          </li>
+          <ul>
+            <li>
+              For example, in a navigation bar, as above, tabbing through should
+              focus on "Homepage", "Vision", "Hearing", "Dexterity", "FAQs" and "Instructions",
+              in that order. Jumping around (e.g. starting with "Dexterity") can
+              confuse users and make the page harder to use.
+            </li>
+          </ul>
+          <li>
+            Content should behave in the way it's shown - if something looks
+            like a hyperlink it should change the page the user is on, not do
+            something on the page like a button.
+            <ul>
+              <li>
+                It's acceptable to remove link underlines in situations such as
+                navbars, as long as it's made clear that they're interactive.
+              </li>
+            </ul>
+          </li>
+          <li>
+            It should be obvious to the user where they are in the website.
+            Another example of this is the use of breadcrumb components for
+            visibility of the sequence followed to navigate to a page,
+            particularly useful in ecommerce with nested products and
+            categories.
+          </li>
+        </ul>
+
+        <div class="h3Inaccessible">Seizures and physical reactions</div>
+        <ul>
+          <li>
+            Flashing lights can cause physical reactions in people with certain
+            health issues, whether those are seizures, migraines, or another
+            response.
+          </li>
+          <li>
+            The minimum requirement to prevent these reactions is that nothing
+            on the page should flash more than three times in one second, or the
+            flash should be
+            <a
+              href="https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html"
+              >below general flash and red flash thresholds</a
+            >. The latter of these can be quite complex to assess and may
+            require the use of
+            <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G15"
+              >a tool</a
+            >.
+          </li>
+          <li>
+            If a video on the page breaches this, provide a seizure warning, as
+            well as a
+            <a href="low-vision-requirements.html"
+              >text alternative to the video content</a
+            >.
+          </li>
+          <li>
+            This website does not showcase failure to meet this requirement due
+            to the safety concerns that would cause.
+          </li>
+        </ul>
+
+        <h3>Parsing
+        <h5 id="coverUpH5">
+          In content implemented with markup languages, elements:
+        </h5>
+        <ul>
+          <li>
+            Should have complete start and end tags.
+            <ul>
+              <li>
+                Modern browsers have repair techniques, which allow them to
+                parse broken HTML, but assistive technologies like screenreaders
+                may not.
+              </li>
+              <li>
+                An incomplete heading element's text may be accessed by a
+                screenreader, but not be added to the list of headings.
+              </li>
+              <li>
+                The "Parsing" heading above does not have a closing tag, so it
+                may not appear as a heading to a screenreader.
+              </li>
+            </ul>
+          </li>
+          <li>Are nested according to their specifications. (The line starting "In content" above is actually an &lt;h5&gt; element, which means that the &lt;h4&gt; tier of headings has been skipped. This is bad practice.) </li>
+          <li>Don't contain duplicate attributes.</li>
+          <li>
+            With the <span class="code">id</span> attribute have unique IDs..
+            <ul>
+              <li>
+                Not using unique IDs means that screenreaders cannot accurately
+                access any instance of an element with that ID other than the
+                first.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!--    <div class="quote">Accessibility isn't a feature. Lack of accessibility is a bug.</div>-->
+    </div>
+  </body>
+</html>

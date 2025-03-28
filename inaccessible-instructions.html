@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Instructions</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+<div class="headerInaccessible">
+    <div id="headingContainerInaccessible">
+        <div class="h1Inaccessible">Instructions</div>
+        <div id="linkToAccessiblePage">
+            <img
+                    id="linkToAccessibleImage"
+                    src="images/unhelpful-image-name.png"
+                    onclick="window.location='instructions.html';"
+            />
+        </div>
+    </div>
+    <div class="navInaccessible">
+        <div
+                class="linkInaccessible"
+                onclick="window.location='inaccessible-index.html';"
+        >
+            Homepage
+        </div>
+        <div
+                class="linkInaccessible"
+                onclick="window.location='inaccessible-low-vision-requirements.html';"
+        >
+            Vision
+        </div>
+        <div
+                class="linkInaccessible"
+                onclick="window.location='inaccessible-hard-of-hearing-deaf-requirements.html';"
+        >
+            Hearing
+        </div>
+        <div
+                class="linkInaccessible"
+                onclick="window.location='inaccessible-limited-dexterity-requirements.html';"
+        >
+            Dexterity
+        </div>
+        <div
+                class="linkInaccessible"
+                onclick="window.location='inaccessible-find-out-more.html';"
+        >
+            FAQs
+        </div>
+        <div
+                class="linkInaccessible"
+                onclick="window.location='inaccessible-instructions.html';"
+        >
+            Instructions
+        </div>
+    </div>
+</div>
+<div id="mainDiv">
+    <div>
+        <h2>Introduction</h2>
+        <p>This page will take you through some activities for each section of the website. These activities are
+            designed to help you
+            understand how it feels to need certain accessibility requirements that haven't been met. You may wish
+            to keep this page open in a separate window for easy reference. You will need to use the Google Chrome web
+            browser for certain activities.</p>
+        <p>Each section of this website has an "accessible" and an "inaccessible" version, and this page is no
+            exception. However, there are no activities relating specifically to this page as it introduces no new
+            functionality.</p>
+    </div>
+    <div>
+        <h2>Sections and Activities</h2>
+        <ol>
+            <li><a href="#homepage_activity_section">Homepage</a>
+                <ol>
+                    <li><a href="#homepage_keyboard_only_activity">Keyboard-only Navigation</a></li>
+                </ol>
+            </li>
+            <li><a href="#vision_activity_section">Vision</a>
+                <ol>
+                    <li><a href="#vision_alt_text_activity">Alt Text</a></li>
+                    <li><a href="#vision_colourblindness_activity">Colourblindness</a></li>
+                    <li><a href="#vision_responsive_design_activity">Responsive Design</a></li>
+                </ol>
+            </li>
+            <li><a href="#hoh_deaf_activity_section">Hearing</a>
+                <ol>
+                    <li><a href="#hoh_deaf_captions_activity">Captions</a></li>
+                </ol>
+            </li>
+            <li><a href="#dexterity_activity_section">Dexterity</a>
+                <ol>
+                    <li><a href="#dexterity_skip_content_activity">Skip Content</a></li>
+                    <li><a href="#dexterity_modal_activity">Modal</a></li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+    <div>
+        <section id="homepage_activity_section">
+            <h2>Homepage</h2>
+            <section id="homepage_keyboard_only_activity">
+                <h3>Keyboard-only Navigation</h3>
+                <ol>
+                    <li>Try navigating through the <a href="inaccessible-index.html">inaccessible homepage</a> using
+                        only
+                        your
+                        Tab and
+                        Arrow keys.
+                    </li>
+                    <li>Note how none of the
+                        options on the navigation bar are highlighted, and nor is the "Make me accessible" "link". This
+                        is
+                        because they're not buttons, but rather &lt;span&gt; elements with "onclick", which are not
+                        natively
+                        added to
+                        the tab
+                        order like buttons are. The "make me accessible" is actually an image of text, which has the
+                        same
+                        problem as spans with the added issue of the text being impossible for a screenreader to parse.
+                    </li>
+                    <li>More information on these issues can be found in the Vision and Dexterity sections.</li>
+                    <li>It's much easier to navigate through the <a href="index.html">accessible homepage</a> using Tab
+                        and
+                        Arrow keys, because semantic
+                        elements are being used which allow keyboard navigation by default.
+                    </li>
+                </ol>
+            </section>
+        </section>
+        <section id="vision_activity_section">
+            <h2>Vision</h2>
+            <section id="vision_alt_text_activity">
+                <h3>Activity 1 - Alt Text</h3>
+                <ol>
+                    <li>On the <a href="inaccessible-low-vision-requirements.html">"Inaccessible Vision"</a> page, read
+                        the
+                        "Alt
+                        text and descriptions of video content" section and follow the instruction in it. Notice how the
+                        content
+                        of the alt text actively makes the activity more difficult, as the entire contents will be read
+                        to a
+                        screenreader user.
+                    </li>
+                    <li>Repeat the activity on the <a href="low-vision-requirements.html">"Accessible Vision"</a> page,
+                        which
+                        should be much easier.
+                    </li>
+                </ol>
+            </section>
+            <section id="vision_colourblindness_activity">
+                <h3>Activity 2 - Colourblindness</h3>
+                <ol>
+                    <li>First, download the <a
+                            href="https://chromewebstore.google.com/detail/colorblindly/floniaahmccleoclneebhhmnjgdfijgg"
+                    >Colorblindly Chrome extension.</a> If you have trouble getting it to work, the <a
+                            href="find-out-more.html">FAQs</a>
+                        has a troubleshooting section.
+                    </li>
+                    <li>Open the <a href="inaccessible-low-vision-requirements.html">"Inaccessible Vision"</a> page and
+                        set
+                        the
+                        Colorblindly
+                        extension to use the "Green-Blind/Deuteranopia" setting.
+                    </li>
+                    <li>Read the "Sensory characteristics of UI" section and follow the instruction in it.</li>
+                    <li>Repeat this for the <a href="low-vision-requirements.html">"Accessible Vision"</a> page. Note
+                        how
+                        even
+                        though the colours are still just as difficult
+                        to distinguish between, it is much easier to complete the task.
+                    </li>
+                    <li>You may wish to turn off Colorblindly for subsequent Vision activities.</li>
+                </ol>
+            </section>
+            <section id="vision_responsive_design_activity">
+                <h3>Activity 3 - Responsive Design</h3>
+                <ol>
+                    <li>This activity can be done on any section of the website, but is most relevant to Vision which
+                        has information on this requirement.
+                    </li>
+                    <li>Go to an inaccessible page (e.g. <a href="inaccessible-low-vision-requirements.html">"Inaccessible
+                        Vision"</a>) and inspect it using Chrome's Developer Tools (right-click > Inspect).
+                    </li>
+                    <li>Toggle the Device Toolbar, set Dimensions to "Responsive", and set the width of the viewport to
+                        320.
+                    </li>
+                    <li>320 CSS pixels is the minimum width at which all content must be accessible without horizontal
+                        scrolling. This benefits users who require a very high zoom level to access content, as well as
+                        conforming to standard responsive design for mobile devices.
+                    </li>
+                    <li>Note that much of the navigation bar becomes unreachable, extending out past the edge of the
+                        viewport.
+                    </li>
+                    <li>Repeat this task on an accessible page (e.g. <a href="low-vision-requirements.html">"Accessible
+                        Vision"</a>).
+                    </li>
+                    <li>See that the presentation of the navbar changes. It is now a vertical stack unhidden
+                        and hidden by a single button. No content or functionality is lost, despite the much narrower
+                        screen.
+                    </li>
+                    <li>Note also that at "desktop" dimensions the video on the <a
+                            href="inaccessible-hard-of-hearing-deaf-requirements.html">"Inaccessible
+                        Hearing"</a> page expands to fill the whole screen because no max-width was set for larger
+                        viewports. Filling the screen by default is not desired behaviour in this case, and there is
+                        already a button
+                        for fullscreen video.
+                    </li>
+                </ol>
+            </section>
+        </section>
+        <section id="hoh_deaf_activity_section">
+            <h2>Hearing</h2>
+            <section id="hoh_deaf_captions_activity">
+                <h3>Captions</h3>
+                <ol>
+                    <li>On the <a href="inaccessible-hard-of-hearing-deaf-requirements.html">"Inaccessible Hearing"</a>
+                        page, watch the video. Consider how difficult it is to determine
+                        what's being said - is Jessica saying she's faking deafness?
+                    </li>
+                    <li>Go to the <a href="hard-of-hearing-deaf-requirements.html">"Accessible Hearing"</a>
+                        page, and watch the video. Notice how you now know exactly what's being said, and how an
+                        impression completely opposite to the truth was given in the non-captioned video.
+                    </li>
+                </ol>
+            </section>
+        </section>
+        <section id="dexterity_activity_section">
+            <h2>Dexterity</h2>
+            <section id="dexterity_skip_content_activity">
+                <h3>Activity 1 - Skip Content</h3>
+                <ol>
+                    <li>Go to the <a href="inaccessible-limited-dexterity-requirements.html">"Inaccessible
+                        Dexterity"</a> page. Try to navigate down to the text content using the Tab key.
+                    </li>
+                    <li>Notice how many
+                        interactive sections there are, that they may be things the user absolutely does not want to
+                        interact with, and how long it takes to get to the desired location. Consider how your
+                        experience would be impacted if this was the case for every webpage you visited.
+                    </li>
+                    <li>Go to the <a href="limited-dexterity-requirements.html">"Accessible
+                        Dexterity"</a> page. Press the Tab key once.
+                    </li>
+                    <li>Observe the "Skip to content" link which has appeared in the top left corner of the viewport,
+                        and which will disappear when it does not receive focus.
+                    </li>
+                    <li>Press the Enter key and see that the header/navigation bar has been skipped and the unique page
+                        content is now displayed.
+                    </li>
+                </ol>
+            </section>
+            <section id="dexterity_modal_activity">
+                <h3>Activity 2 - Modal</h3>
+                <ol>
+                    <li>On the <a href="inaccessible-limited-dexterity-requirements.html">"Inaccessible
+                        Dexterity"</a> page, use the keyboard to navigate to and interact with the "Open Modal" button.
+                    </li>
+                    <li>Try pressing the Escape button and see if it closes the modal.</li>
+                    <li>Can you navigate to the Close, Cancel or Confirm buttons using the keyboard? Try pressing Tab a
+                        few times. Notice that input isn't
+                        confined to only affect the modal content
+                        as it should, but rather affects the page behind the modal.
+                    </li>
+                    <li>It is impossible to close the modal without the use of the mouse. This is one example of a
+                        keyboard trap.
+                    </li>
+                    <li>Repeat this activity on the <a href="limited-dexterity-requirements.html">"Accessible
+                        Dexterity"</a> page. Note that tabbing only selects the three buttons on the modal and the URL
+                        bar in your browser, and using the Escape key closes the modal.
+                    </li>
+                </ol>
+            </section>
+        </section>
+    </div>
+</div>
+</body>
+</html>
