@@ -202,6 +202,43 @@ li {
     margin-bottom: 0.15rem;
 }
 
+#inaccessibleToast {
+    visibility: hidden;
+    position: fixed;
+    min-height: 80%;
+    background-color: var(--blue-colour, var(--accessible-blue));
+    text-align: center;
+    top: 20%;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    padding: 1rem 2rem;
+}
+
+#inaccessibleToast p {
+    color: white;
+}
+
+#inaccessibleToast.show {
+    visibility: visible;
+    animation: toast 1s linear forwards;
+}
+
+@keyframes toast {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 #linkToAccessibleImage {
     width: 230px;
     margin-bottom: 0;
@@ -405,13 +442,17 @@ li {
     margin: 1rem auto;
 }
 
-#accessibleModal {
+#accessibleModal, #accessibleIndexModal {
     background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
     text-align: center;
+}
+
+#accessibleIndexModal {
+    margin: 5% auto;
 }
 
 #accessibleModal::backdrop {

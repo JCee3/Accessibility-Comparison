@@ -130,6 +130,63 @@
             categories.
           </li>
         </ul>
+        <h3>Enough time</h3>
+        <ul>
+          <li>Many different disabilities can lead to users needing more time to complete tasks:
+            <ul>
+              <li>People with specific learning difficulties like dyslexia may take longer to read text.</li>
+              <li>People with low vision may take longer to find information, or read it, whether due to assistive
+                technology like a screenreader or working with a zoomed in view.
+              </li>
+              <li>People with physical disabilities may take longer to be able to physically interact with the
+                page.
+              </li>
+              <li>People with disabilities impacting their processing speed, such as certain learning
+                disabilities, neurodivergencies or "brain fog" from chronic conditions, can need more time to
+                process the information.
+              </li>
+            </ul>
+          </li>
+          <li>Unnecessarily timed activities, such as the use of "toasts", can significantly negatively impact these
+            users.
+          </li>
+          <li>As this is the accessible page, open the modal with the button below to learn more about the problems
+            with timed information and toasts.
+          </li>
+        </ul>
+        <div class="buttonContainer">
+          <button class="accessibleRectangularBlueButton" id="accessibleModalOpenButton">
+            Open Modal
+          </button>
+        </div>
+        <dialog id="accessibleIndexModal">
+          <form method="dialog">
+            <div id="modalHeadingContainer">
+              <h1 id="modalHeading">The trouble with timed information</h1>
+              <button
+                      id="accessibleModalCloseButton"
+                      type="submit"
+                      onclick=""
+                      aria-label="close"
+                      formmethod="dialog"
+                      formnovalidate
+              >
+                &times;
+              </button>
+            </div>
+            <p>IMPORTANT!!!</p>
+            <p>This could be some really important information, such as warning a user that their basket is about to
+              expire, telling them the action they just tried to perform couldn't be completed, or many other
+              things.</p>
+            <p>For many people, a toast is actively unhelpful because its presence is time-restricted and can't
+              be extended.</p>
+            <p>If something like a toast is needed, remove the time limit and make it dismissible using a button.
+              Modals (using the <span class="code">dialog</span> element) can be an acceptable substitution for
+              important information of this kind. </p>
+            <p>Note how you can take as much time as you need to read the contents of this modal, and dismiss it
+              when you're ready.</p>
+          </form>
+        </dialog>
         <h3>Seizures and physical reactions</h3>
         <ul>
           <li>
@@ -196,6 +253,13 @@
       <div class="quote">
         Accessibility isn't a feature. Lack of accessibility is a bug.
       </div>
+      <script>
+        const modal = document.getElementById("accessibleModalOpenButton");
+        const dialog = document.getElementById("accessibleIndexModal");
+        modal.addEventListener("click", (event) => {
+          dialog.showModal();
+        });
+      </script>
     </main>
   </body>
 </html>

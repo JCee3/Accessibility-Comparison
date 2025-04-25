@@ -141,7 +141,31 @@
             categories.
           </li>
         </ul>
-
+        <div class="h3Inaccessible">Enough time</div>
+        <ul>
+          <li>Many different disabilities can lead to users needing more time to complete tasks:
+            <ul>
+              <li>People with specific learning difficulties like dyslexia may take longer to read text.</li>
+              <li>People with low vision may take longer to find information, or read it, whether due to assistive technology like a screenreader or working with a zoomed in view.</li>
+              <li>People with physical disabilities may take longer to be able to physically interact with the page.</li>
+              <li>People with disabilities impacting their processing speed, such as certain learning disabilities, neurodivergencies or "brain fog" from chronic conditions, can need more time to process the information.</li>
+            </ul>
+          </li>
+          <li>Unnecessarily timed activities, such as the use of "toasts", can significantly negatively impact these users.</li>
+          <li>Try interacting with the button below to get an idea of how this kind of timing might feel for someone affected.</li>
+        </ul>
+        <div class="buttonContainer">
+          <div class="inaccessibleRectangularBlueButton" id="inaccessibleToastOpenButton"
+               onclick="openToast()">
+            Open Toast
+          </div>
+        </div>
+        <div id="inaccessibleToast">
+          <p>IMPORTANT!!!</p>
+          <p>This could be some really important information, such as warning a user that their basket is about to expire, telling them the action they just tried to perform couldn't be completed, or many other things.</p>
+          <p>For many people, this toast is actively unhelpful because its presence is time-restricted and can't be extended.</p>
+          <p>If something like a toast is needed, remove the time limit and make it dismissible using a button. Modals (using the <span class="code">dialog</span> element) can be an acceptable substitution for important information of this kind. </p>
+        </div>
         <div class="h3Inaccessible">Seizures and physical reactions</div>
         <ul>
           <li>

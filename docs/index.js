@@ -7,6 +7,14 @@ function openClosedDiv(id) {
     }
 }
 
+function openToast() {
+    var toastDiv = document.getElementById('inaccessibleToast');
+    toastDiv.className = 'show';
+    setTimeout(function () {
+        toastDiv.className = toastDiv.className.replace('show', '');
+    }, 3000);
+}
+
 function toggleDivVisibility(id) {
     const toggleDiv = document.getElementById(id);
     if (toggleDiv) {
