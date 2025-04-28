@@ -387,6 +387,10 @@ li {
     background-color: var(--blue-colour, var(--accessible-blue));
 }
 
+.inaccessibleRectangularBlueButton {
+    margin: 1rem auto;
+}
+
 .accessibleRectangularBlueButton:hover, .accessibleRectangularBlueButton:focus {
     outline: 3px solid var(--blue-colour, var(--accessible-blue));
     border: 2px solid white;
