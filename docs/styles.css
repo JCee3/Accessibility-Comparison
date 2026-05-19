@@ -283,7 +283,7 @@ li {
     font-size: 1.2em;
 }
 
-#hidableAltTextContent, #hidableClearRabbitPhoto, #hidableColorblindlyInstructions, #hidableCorrectImageGuess, #hidableLowVisionInfo, #hidableWrongImageGuess, #hidableKeyboardOnlyInfo, #hidableCaptionsInfo {
+#hidableAltTextContent, #hidableClearRabbitPhoto, #hidableCorrectImageGuess, #hidableLowVisionInfo, #hidableWrongImageGuess, #hidableKeyboardOnlyInfo, #hidableCaptionsInfo {
     display: none;
 }
 
@@ -396,12 +396,8 @@ li {
     border: 2px solid white;
 }
 
-#imageGuessButtons button, #seeAltTextContentButton, #seeColorblindlyInstructionsButton, #seeRabbitButton {
+#imageGuessButtons button, #seeAltTextContentButton, #seeRabbitButton {
     margin-bottom: 1rem;
-}
-
-#seeColorblindlyInstructionsButton {
-    margin-top: 1rem;
 }
 
 #cancelButton:hover, #cancelButton:focus {
@@ -606,7 +602,7 @@ li {
         font-size: 1.1rem;
         padding: 0.5rem;
         position: absolute;
-        top: -50px;
+        top: -100%;
     }
 
     #skipToContent:focus {
