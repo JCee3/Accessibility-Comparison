@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="index.js" defer></script>
   </head>
 
   <body>
@@ -27,7 +27,7 @@
           class="icon"
           onclick="toggleDivVisibility('navLinks')"
         >
-          <icon class="fa fa-bars"></icon>
+          <i class="fa fa-bars" aria-hidden="true"></i>
           Navigation
         </button>
         <div class="navLinks" id="navLinks">
@@ -47,7 +47,7 @@
     <main>
       <div id="webpageAccessibilityStat" class="quote">
         <p>
-          In February 2024, only 4.1% of the top million web home pages were
+          In February 2026, only 4.1% of the top million web home pages were
           digitally accessible, based on automated accessibility checking.
         </p>
         <p class="bold">
@@ -55,7 +55,7 @@
         </p>
         <!-- https://webaim.org/projects/million/ -->
       </div>
-      <div>
+      <div class="contentBlock">
         <h2>Introduction</h2>
         <p>
           The
@@ -78,7 +78,7 @@
           requirements are described in the pages for each disability.
         </p>
       </div>
-      <div class="requirementsInfo">
+      <div class="contentBlock requirementsInfo">
         <h2>General Requirements</h2>
         <h3>Information and Relationships, Meaningful Sequence</h3>
         <ul>
@@ -253,13 +253,13 @@
       <div class="quote">
         Accessibility isn't a feature. Lack of accessibility is a bug.
       </div>
-      <script>
-        const modal = document.getElementById("accessibleModalOpenButton");
-        const dialog = document.getElementById("accessibleIndexModal");
-        modal.addEventListener("click", (event) => {
-          dialog.showModal();
-        });
-      </script>
     </main>
+    <script>
+      const modal = document.getElementById("accessibleModalOpenButton");
+      const dialog = document.getElementById("accessibleIndexModal");
+      modal.addEventListener("click", (event) => {
+        dialog.showModal();
+      });
+    </script>
   </body>
 </html>

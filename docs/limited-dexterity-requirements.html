@@ -28,7 +28,7 @@
                 class="icon"
                 onclick="toggleDivVisibility('navLinks')"
         >
-            <icon class="fa fa-bars"></icon>
+            <i class="fa fa-bars" aria-hidden="true"></i>
             Navigation
         </button>
         <div class="navLinks" id="navLinks">
@@ -59,6 +59,7 @@
     </div>
 </header>
 <main id="mainContent">
+    <div class="contentBlock">
     <h2>Context</h2>
     <p>
         People may have limited dexterity for many different reasons, such as:
@@ -94,6 +95,8 @@
         user in this category will. It's especially important to consider
         keyboard-only users.
     </p>
+    </div>
+    <div class="contentBlock">
     <h2>Requirements</h2>
     <!-- No drag and drop -->
     <!-- No keyboard traps - modal? -->
@@ -244,10 +247,10 @@
                 if you hit Tab a lot?
             </p>
             <div class="modalButtonBar">
-                <button class="accessibleRectangularBlueButton" id="confirmButton" class="confirmButton">Confirm
+                <button class="accessibleRectangularBlueButton" id="confirmButton">Confirm
                 </button
                 >
-                <button id="cancelButton" class="cancelButton">Cancel</button>
+                <button id="cancelButton">Cancel</button>
             </div>
         </form>
     </dialog>
@@ -300,6 +303,7 @@
             effort on motor planning.
         </li>
     </ul>
+    </div>
     <script>
         const modal = document.getElementById("accessibleModalOpenButton");
         const dialog = document.getElementById("accessibleModal");

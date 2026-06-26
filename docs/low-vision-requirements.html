@@ -28,7 +28,7 @@
           class="icon"
           onclick="toggleDivVisibility('navLinks')"
         >
-          <icon class="fa fa-bars"></icon>
+          <i class="fa fa-bars" aria-hidden="true"></i>
           Navigation
         </button>
         <div class="navLinks" id="navLinks">
@@ -49,7 +49,7 @@
     </header>
     <main id="mainContent">
       <!-- Add: don't autoplay -->
-
+      <div class="contentBlock">
       <h2>Requirements</h2>
       <p>
         Done the activities before and just want to see all the information?
@@ -72,7 +72,8 @@
           Change colours
         </button>
       </p>
-
+      </div>
+      <div class="contentBlock">
       <h3>Alt text and descriptions of video content</h3>
       <div id="blurredImageContainer">
         <figure id="blurredImage">
@@ -238,6 +239,8 @@
           by an audio description.
         </p>
       </div>
+      </div>
+      <div class="contentBlock">
       <h3>Sensory characteristics of UI</h3>
       <p>
         Don't create interfaces that only rely on sensory characteristics in
@@ -269,6 +272,8 @@
           this. Labelling elements is an excellent way to fulfil this criterion.
         </p>
       </div>
+      </div>
+      <div class="contentBlock">
       <h3>Colour contrast</h3>
       <ul>
         <li>
@@ -282,7 +287,7 @@
             </li>
             <li>
               Text that's part of an inactive UI component (disabled), is purely
-              decorative, isn't visible to anyone, or are part of a picture
+              decorative, isn't visible to anyone, or is part of a picture
               containing significant other visual content.
             </li>
             <li>Text that's part of a logo or brand name.</li>
@@ -344,6 +349,8 @@
           </figcaption>
         </figure>
       </div>
+      </div>
+      <div class="contentBlock">
       <h3>Responsive design</h3>
       <ul>
         <li>
@@ -373,6 +380,8 @@
           table component has these scrollbars and not the whole page.
         </li>
       </ul>
+      </div>
+      <div class="contentBlock">
       <h3>Focus indicator</h3>
       <!--    Add activity where default focus indicator has been removed and not replaced. -->
       <p>
@@ -400,13 +409,17 @@
             </li>
           </ul>
         </li>
-        <li>The focus ring should always be solid, not dotted or dashed.</li>
+        <li>The focus ring should generally be solid, rather than dotted or dashed. This is due to it being simpler
+          to
+          meet thickness and contrast requirements with a solid line.
+        </li>
         <li>
           The ring should be around the whole element, but this doesn't mean it
           needs to conform to the shape of the element - for example, a
           star-shaped element doesn't need a star-shaped focus ring.
         </li>
       </ul>
+      </div>
     </main>
   </body>
 </html>

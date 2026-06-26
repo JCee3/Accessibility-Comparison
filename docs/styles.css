@@ -19,6 +19,11 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+body {
+    margin: 0;
+    min-height: 100vh;
+}
+
 .basicTextColour {
     color: #666666;
 }
@@ -35,6 +40,13 @@ h1 {
 
 h3 {
     padding-top: 1rem;
+}
+
+main, #mainDiv {
+    max-width: 70em;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.75em;
 }
 
 .code {
@@ -61,7 +73,7 @@ h3 {
     margin-top: 1rem;
 }
 
-#navigationButton icon {
+#navigationButton i {
     padding: 1rem;
 }
 
@@ -103,6 +115,7 @@ h3 {
 main {
     background-color: #ffffff;
     padding: 24px;
+    padding-bottom: 5rem;
     color: var(--accessible-text-default);
 
 }
@@ -113,11 +126,15 @@ main {
     color: var(--accessible-text-default);
 }
 
+.contentBlock {
+    margin-bottom: 3rem;
+}
+
 .quote,
 .quote p {
     font-size: 1.4rem;
     max-width: 95%;
-    margin: 2rem auto;
+    margin: 2rem auto 0 auto;
     text-align: center;
     color: black;
 }
@@ -127,9 +144,12 @@ p, #coverUpH5 {
     color: var(--accessible-text-default);
 }
 
+ul {
+    line-height: 1.75em;
+}
+
 li {
     font-size: 1rem;
-    line-height: 1.5;
 }
 
 #coverUpH5 {
@@ -523,7 +543,8 @@ li {
 #bloatContent {
     display: flex;
     flex-direction: column;
-    margin-top: 1rem;
+    margin: 1rem auto 0 auto;
+    max-width: 80em;
 }
 
 #bloatContent a {
@@ -593,7 +614,7 @@ li {
     .quote p {
         font-size: 1.6rem;
         max-width: 90%;
-        margin: 2rem auto;
+        margin: 2rem auto 0 auto;
     }
 
     #skipToContent {
